@@ -16,6 +16,7 @@ namespace DataAccessLayer.Abstract
         void Insert(T p);
 
         //Sil
+        T GeT(Expression<Func<T, bool>> filter);
         void Delete(T p);
 
         //Güncelle

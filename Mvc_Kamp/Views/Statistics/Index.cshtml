@@ -1,0 +1,62 @@
+﻿<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Content/bootstrap.min.js"></script>
+<style>
+    .card-height {
+        height: 150px;
+        text-align: center;
+        justify-content: center;
+        margin: 5px;
+        margin-bottom: 15px;
+        font-size: x-large;
+        background-color: #20bf6b;
+    }
+    .span-color1 {
+        color: #ff3838;
+        font-weight: bold;
+    }
+    .span-color2 {
+        color: #3d3d3d;
+        font-weight: bold;
+    }
+    .row-custom{
+        padding-top:15px;
+    }
+</style>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row justify-content-around row-custom">
+    <div class="card col-12 col-sm-5 col-lg-3 card-height">
+        <span class="span-color1">Toplam Kategori Sayısı</span>
+        <span class="span-color2">@ViewBag.categorycount</span>
+    </div>
+    <div class="card col-12 col-sm-5 col-lg-3 card-height">
+        <span class="span-color1">Başlık tablosunda "yazılım" kategorisine ait başlık sayısı</span>
+        <span class="span-color2">@ViewBag.softwarecount</span>
+    </div>
+    <div class="card col-12 col-sm-5 col-lg-3 card-height">
+        <span class="span-color1">Yazar adında 'a' harfi geçen yazar sayısı</span>
+        <span class="span-color2">@ViewBag.writerfind</span>
+    </div>
+    <div class="card col-12 col-sm-5 col-lg-3 card-height">
+        <span class="span-color1">En fazla başlığa sahip kategori adı</span>
+        <span class="span-color2">@ViewBag.categoryname</span>
+    </div>
+    <div class="card col-12 col-sm-5 col-lg-3 card-height">
+        <span class="span-color1">En fazla başlığa sahip kategori'nin başlık sayısı</span>
+        <span class="span-color2">@ViewBag.categoryamount</span>
+    </div>
+    <div class="card col-12 col-sm-5 col-lg-3 card-height">
+        <span class="span-color1">Aktif ile pasif kategori arasındaki fark</span>
+        <span class="span-color2">@ViewBag.categorydifference</span>
+    </div>
+   
+    
+    
+</div>
+
+
+
+

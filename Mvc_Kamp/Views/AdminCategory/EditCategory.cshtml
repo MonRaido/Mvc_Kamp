@@ -1,0 +1,36 @@
+﻿@model EntityLayer.Concreate.Category
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "EditCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Kategori Güncelleme Sayfası</h2>
+
+@using(Html.BeginForm("EditCategory", "AdminCategory", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.Label("Kategori ID", new { @class = "form-label" })
+    <div class="input-group mb-3">
+        @Html.TextBoxFor(x => x.CategoryID, new { @class = "form-control col-1" })
+    </div>
+    @Html.Label("Kategori Adı", new { @class = "form-label" })
+    <div class="input-group mb-3">
+        @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control col-3" })
+    </div>
+    @Html.Label("Kategori Açıklaması", new { @class = "form-label" })
+    <div class="input-group mb-3">
+        @Html.TextAreaFor(x => x.CategoryDescription, new { @class = "form-control col-3" })
+    </div>
+    <div class="input-group mb-3 form-check form-switch">
+        @Html.CheckBoxFor(x => x.CategoryStatus, new { @class = "form-check-input" })
+        @Html.Label("Kategori Durumu", new { @class = "form-check-label" })
+
+    </div>
+    <button class="btn btn-success">Güncelle</button>
+
+
+</div>
+}
+
